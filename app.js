@@ -52,6 +52,6 @@ app.use("/campgrounds/:id/comments", commentRoutes);
 app.use("/campgrounds", campgroundRoutes);
 app.use("/", indexRoutes);
 
-app.listen(3000, process.env.IP, () => {
+app.listen(process.env.port || 3000, process.env.IP, () => {
     console.log("start");
 });
