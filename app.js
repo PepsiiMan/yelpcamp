@@ -16,7 +16,7 @@ const indexRoutes = require("./routes/index");
 
 require('dotenv').config()
 
-mongoose.connect('mongodb+srv://' + process.env.DB_USER + ':' + process.env.DB_PASS + '@cluster0.3gvvp.mongodb.net/yelp_camp?retryWrites=true&w=majority', {
+mongoose.connect(process.env.DATABASEURL, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
         useFindAndModify: false
