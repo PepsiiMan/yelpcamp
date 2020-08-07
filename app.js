@@ -14,7 +14,9 @@ const commentRoutes = require("./routes/comments");
 const campgroundRoutes = require("./routes/campgrounds");
 const indexRoutes = require("./routes/index");
 
-mongoose.connect('mongodb://localhost:27017/yelp_camp', {
+require('dotenv').config()
+
+mongoose.connect('mongodb+srv://' + process.env.DB_USER + ':' + process.env.DB_PASS + '@cluster0.3gvvp.mongodb.net/yelp_camp?retryWrites=true&w=majority', {
         useNewUrlParser: true,
         useUnifiedTopology: true,
         useFindAndModify: false
